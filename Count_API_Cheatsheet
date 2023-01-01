@@ -1,0 +1,30 @@
+
+# Count API #
+
+1. Set up your HTML,CSS and javascript
+     In index.html => <h1> Page visits - <span id="visits"> .</span></h1>
+
+
+2. Create a namespace
+  on browser: https://api.countapi.xyz/create?namespace={name of your website}&enable_reset=1
+               sitename: suraj.com -> namespace: suraj.com 
+
+3. Add this script at the top of your index.html file
+ <script async src="https://api.countapi.xyz/hit/mysite.com/key?callback=websiteVisits"></script>
+
+4. Add this function in your script.js file
+    function websiteVisits(response) {
+    document.querySelector("#visits").textContent = response.value;
+}
+
+*Bonus*
+
+5. Reset the value of your key
+    https://api.countapi.xyz/set/{namespace}/{key}?value={whatever you want , most likely 0}
+ 
+6. View the current value of your key
+    https://api.countapi.xyz/get/{namespace}/{key}
+
+
+    
+
